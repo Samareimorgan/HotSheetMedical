@@ -6,7 +6,7 @@ router.route("/")
     .get(insuranceController.findAll)
     .post(insuranceController.create);
 
-//Matches 
+//Matches api/insurance/:id
 router
     .route("/:id")
     .get(insuranceController.findById)
