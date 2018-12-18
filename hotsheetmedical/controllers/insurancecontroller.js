@@ -1,4 +1,4 @@
-const db = require("../controllers")
+const db = require("../models")
 
 //defining the methods for insurance db
 module.exports = {
