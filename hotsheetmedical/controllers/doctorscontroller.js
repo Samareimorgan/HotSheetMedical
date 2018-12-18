@@ -1,4 +1,4 @@
-const db = require("../controllers")
+const db = require("../models")
 
 //defining methods for the doctors controller
 
