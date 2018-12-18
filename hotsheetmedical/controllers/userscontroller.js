@@ -13,7 +13,7 @@ module.exports = {
 
     findById: function(req,res) {
         db.Users
-            .findById(req.paras.id)
+            .findById(req.params.id)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
