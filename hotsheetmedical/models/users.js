@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const usersSchema = new Schema ({
     user_id: {
-        type: Number,
+        type: ObjectId,
         required: true
     },
     first_name: {
@@ -19,42 +19,43 @@ const usersSchema = new Schema ({
         required: true
     },
 
-    street_address: {
-        type: String,
-        required: false
+    address: {
+        street_address: {
+            type: String,
+            required: false
+        },
+        city: {
+            type: String,
+            required: false
+        },
+    
+        state: {
+            type: String,
+            required: false
+        },
+    
+        zipcode: {
+            type: Integer,
+            required: true
+        },
     },
-
-    city: {
-        type: String,
-        required: false
-    },
-
-    state: {
-        type: String,
-        required: false
-    },
-
-    zipcode: {
-        type: Number,
-        required: true
-    },
-
+    
     email: {
         type: String,
         required: true,
-        validation:
+        validate:
     },
 
     phone: {
-        type: Number,
+        type: Integer,
         required: true,
-        validation:
+        validate:
     },
 
     birthdate: {
-        type: Number,
+        type: Date,
         required: true,
-        validation:
+        validate:
     },
 
     pin: {
@@ -73,12 +74,43 @@ const usersSchema = new Schema ({
         
     },
 
-    doctors: {
-        
+    doctors: [ 
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Doctors"
+        } 
+    ],
+
+    medications: [
+        {
+            type: Schema.Types.ObjectId, 
+            ref: "Medications"
+        }
+    ], 
+
+    allergies:[
+        {
+            type: Schema.Types.ObjectId,
+            ref:"Allergies"
+        }
+    ],
+
+    connections: [
+        {
+            type: Schema.Types.ObjectId, 
+            ref: "Connections"
+        }
+    ],
+
+    insurances: [
+        {
+            type: Schema.Types.ObjectId, 
+            ref: "Insurances"
+        }
+    ]
     }
-    medications:
-    allergies:
-    dnr:
-    living_will:
-    key:
-})
+
+    // dnr:
+    // living_will:
+    // key:
+});
