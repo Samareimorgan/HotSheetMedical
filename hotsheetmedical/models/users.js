@@ -43,19 +43,27 @@ const usersSchema = new Schema ({
     email: {
         type: String,
         required: true,
-        validate:
+        validate: { $regex: /@mongodb\.com$/ } 
     },
 
     phone: {
         type: Integer,
         required: true,
-        validate:
+        validate:input => {
+            if (input.length !== 10) {
+                "Please enter the 10 digits for your phone number"
+            }
+        }
     },
 
     birthdate: {
         type: Date,
         required: true,
-        validate:
+        validate: input => {
+            if (input.length !== 8) {
+                "Please enter 8 digits for your full birthdate"
+            }
+        }
     },
 
     pin: {
@@ -108,9 +116,10 @@ const usersSchema = new Schema ({
             ref: "Insurances"
         }
     ]
-    }
-
-    // dnr:
-    // living_will:
-    // key:
 });
+    //Additional Items for Users in Next Iteration of Program 
+    // dnr: (Do Not Resusitate Order)
+    // living_will: (Living Will)
+const Users = mongoose.model("Users", usersSchema);
+
+module.exports = Users;
