@@ -3,6 +3,6 @@ import { Button } from 'reactstrap';
 
 export default props => {
   return (
-    <Button color="danger" {props.name}/>
+    <Button color="danger" {...props.name}/>
   );
 };
