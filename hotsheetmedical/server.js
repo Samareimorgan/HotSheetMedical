@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 
 //Define middleware
 app.use(bodyParser.urlencoded({ extended: true}));
@@ -17,7 +17,7 @@ if(process.env.NODE_ENV === "production") {
 app.use(routes);
 
 //Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb:/localhost:27017/hotsheetmedical", { useNewUrlParser: true });
+mongoose.connect('mongodb:/localhost:27017/hotsheetmedical', { useNewUrlParser: true });
 
 //Start the API Server
 app.listen(PORT, function() {

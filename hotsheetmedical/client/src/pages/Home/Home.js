@@ -6,11 +6,13 @@ class EmergencyButton extends Component {
 
 render() {
 
-    return ( <div><EmergencyButton/>
-        <EmergencyButton/>
-        <EmergencyButton/>
-        <EmergencyButton/>
-        <EmergencyButton/>
+    return ( <div>
+        <EmergencyButton> </EmergencyButton>
+        <EmergencyButton></EmergencyButton>
+        <EmergencyButton></EmergencyButton>
+        <EmergencyButton></EmergencyButton>
+        <EmergencyButton></EmergencyButton>
+      
         </div>
         );
     }
