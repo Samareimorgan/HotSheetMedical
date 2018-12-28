@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const ObjectId = mongoose.Schema.Types.ObjectId;
 const Schema = mongoose.Schema;
 
 const usersSchema = new Schema ({
@@ -35,7 +36,7 @@ const usersSchema = new Schema ({
         },
     
         zipcode: {
-            type: Integer,
+            type: Number,
             required: true
         },
     },
@@ -43,37 +44,37 @@ const usersSchema = new Schema ({
     email: {
         type: String,
         required: true,
-        validate: { $regex: /@mongodb\.com$/ } 
+        // validate: { $regex: /@mongodb\.com$/ } 
     },
 
     phone: {
-        type: Integer,
+        type: Number,
         required: true,
-        validate:input => {
-            if (input.length !== 10) {
-                "Please enter the 10 digits for your phone number"
-            }
-        }
+        // validate:input => {
+        //     if (input.length !== 10) {
+        //         "Please enter the 10 digits for your phone number"
+        //     }
+        // }
     },
 
     birthdate: {
         type: Date,
         required: true,
-        validate: input => {
-            if (input.length !== 8) {
-                "Please enter 8 digits for your full birthdate"
-            }
-        }
+        // validate: input => {
+        //     if (input.length !== 8) {
+        //         "Please enter 8 digits for your full birthdate"
+        //     }
+        // }
     },
 
     pin: {
         type: Number,
         required: true,
-        validate:input => {
-            if (input.length !== 6) {
-                "Your PIN does not have 6 numbers"
-            }
-        }
+        // validate:input => {
+        //     if (input.length !== 6) {
+        //         "Your PIN does not have 6 numbers"
+        //     }
+        // }
     },
 
     password: {
@@ -116,6 +117,7 @@ const usersSchema = new Schema ({
             ref: "Insurances"
         }
     ]
+
 });
     //Additional Items for Users in Next Iteration of Program 
     // dnr: (Do Not Resusitate Order)

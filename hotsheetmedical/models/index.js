@@ -3,6 +3,6 @@ module.exports = {
     Connections: require("./Connections"),
     Doctors: require("./Doctors"),
     Insurances: require("./Insurances"),
-    Medications: require("./Medication"),
+    Medications: require("./Medications"),
     Users: require("./Users")
 };

@@ -1,4 +1,5 @@
 const mongoose = require("Mongoose");
+const ObjectId = mongoose.Schema.Types.ObjectId;
 const Schema = mongoose.Schema;
 
 const connectSchema = new Schema ({

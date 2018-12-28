@@ -17,7 +17,7 @@ if(process.env.NODE_ENV === "production") {
 app.use(routes);
 
 //Connect to the Mongo DB
-mongoose.connect('mongodb:/localhost:27017/hotsheetmedical', { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/hotsheetmedical", { useNewUrlParser: true });
 
 //Start the API Server
 app.listen(PORT, function() {

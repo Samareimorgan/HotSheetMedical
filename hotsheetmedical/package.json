@@ -9,5 +9,15 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "reactstrap": "^6.5.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "hotsheetmedical",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
