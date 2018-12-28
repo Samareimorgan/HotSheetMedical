@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const ObjectId = mongoose.Schema.Types.ObjectId;
 const Schema = mongoose.Schema;
 
 const insSchema = new Schema ({
@@ -25,7 +26,7 @@ const insSchema = new Schema ({
         },
         company_phone_number: 
         {
-            type: Integer, 
+            type: Number, 
             required: true
         }
         

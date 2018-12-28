@@ -6,6 +6,7 @@ const allergySchema = new Schema({
         type: String, 
         required: true
     },
+    
 });
 
 const Allergies = ("Allergies", allergySchema);

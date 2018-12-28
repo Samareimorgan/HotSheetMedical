@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const ObjectId = mongoose.Schema.Types.ObjectId;
 const Schema = mongoose.Schema;
 
 const docSchema = new Schema ({
@@ -42,7 +43,7 @@ const docSchema = new Schema ({
             type: String, 
         },
         office_zip_code: {
-            type: Integer,
+            type: Number,
             required: true,
             validate: input => {
                 if (input.length !== 5) {
@@ -52,7 +53,7 @@ const docSchema = new Schema ({
         }, 
     },
     doctor_phone_number: {
-        type: Integer,
+        type: Number,
         required: true, 
         validate: input => {
             if (input.length !== 10) {
