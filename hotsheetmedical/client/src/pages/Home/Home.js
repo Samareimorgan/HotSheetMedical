@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import API from "../../utils/API";
+//import API from "../../utils/API";
 import EmergencyButton from "../../components/EmergencyButton";
 
 class Home extends Component {
