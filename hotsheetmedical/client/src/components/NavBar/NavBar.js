@@ -1,66 +1,28 @@
-import React from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+ import React from 'react';
+import "./NavBar.css";
+import DrawerToggleBtn from "../SideDrawer/DrawerToggleBtn";
+import logo from "./Logo/Hotsheetlogocolor.png";
 
-export default class Example extends React.Component {
-  constructor(props) {
-    super(props);
+const navbar = props => (
+    <header className = "navbar">
+        <nav className="navbar_navigation">
+            <div className = "navbar-toggle-button">
+                <DrawerToggleBtn click={props.drawerClickHandler}/>
+            </div>
+            <div className = "navigation-logo"> <a href="/"> <img className="logo" src={logo} alt ={"logo"}/></a></div>
+            <div className ="spacer"></div>
+            <div className ="navbar_navigation_items">
+                <ul>
+                    <li><a href ="/">Home</a></li>
+                    <li><a href ="/">Profile</a></li>
+                    <li><a href ="/">Settings</a></li>
+                    <li><a href ="/">Connections</a></li>
+                    <li><a href ="/">About</a></li>
+                    <li><a href ="/">Logout/LogIn</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+); 
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
-  }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
-  render() {
-    return (
-      <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
-    );
-  }
-}
+export default navbar;
