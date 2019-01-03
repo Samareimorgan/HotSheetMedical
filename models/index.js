@@ -1,8 +1,8 @@
 module.exports = {
-    Allergies: require("./Allergies"),
-    Connections: require("./Connections"),
-    Doctors: require("./Doctors"),
-    Insurances: require("./Insurances"),
-    Medications: require("./Medications"),
-    Users: require("./Users")
+    Allergies: require("./allergies"),
+    Connections: require("./connections"),
+    Doctors: require("./doctors"),
+    Insurances: require("./insurances"),
+    Medications: require("./medications"),
+    Users: require("./users")
 };

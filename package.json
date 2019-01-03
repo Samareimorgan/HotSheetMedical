@@ -1,11 +1,21 @@
 {
-  "name": "hotsheetmedical",
+  "name": "hotsheet2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-router": "^0.0.1",
+    "if-env": "^1.0.4",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.4.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.2",
+    "reactstrap": "^6.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,5 +31,12 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "description": "Bringing Patient Information to First Responders, Fast!",
+  "main": "server.js",
+  "author": "Samarei Morgan",
+  "license": "MIT"
 }
