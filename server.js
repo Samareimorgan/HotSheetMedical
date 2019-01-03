@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+const url = 'mongodb://localhost:27017/hotsheetmedical';
 const PORT = process.env.PORT || 3001;
 
 //Define middleware
@@ -17,7 +18,13 @@ if(process.env.NODE_ENV === "production") {
 app.use(routes);
 
 //Connect to the Mongo DB
-mongoose.connect("mongodb://localhost:27017/hotsheetmedical");
+mongoose.connect(url, function (err, db) {
+    if (err) {
+      console.log('Unable to connect to the mongoDB server. Error:', err);
+    } else {
+      console.log('Connection established to', url);
+    }
+   });
 
 
 //Start the API Server

@@ -1,0 +1,10 @@
+.emergencyBtn {
+    background-color: red;
+    font-size: 20px;
+    padding: 10px;
+    width: 65%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    margin: 10px; 
+}

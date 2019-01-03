@@ -1,0 +1,16 @@
+html {
+    height: 100%
+}
+
+body {
+    background: navy;
+    height: 100%;
+}
+
+
+.homeEmergencyBtns {
+    margin-top: 35%;
+    margin-left: 20%;
+
+}
+
