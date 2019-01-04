@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 //import API from "../../utils/API";
-import EmergencyButton from "../../components/EmergencyButton/index.js";
+import EmergencyButton from "../../components/EmergencyButton";
 import NavBar from "../../components/NavBar/NavBar";
 import SideDrawer from "../../components/SideDrawer/SideDrawer";
 import Backdrop from "../../components/Backdrop/Backdrop";

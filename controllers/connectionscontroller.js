@@ -1,4 +1,4 @@
-const db = require("../models")
+const db = require("../models");
 
 //define methods for the connections controller
 module.exports = {

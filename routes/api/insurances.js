@@ -4,13 +4,13 @@ const insuranceController = require("../../controllers/insurancecontroller");
 //Matches api/insurance
 router.route("/")
     .get(insuranceController.findAll)
-    .post(insuranceController.create);
+    // .post(insuranceController.create);
 
 //Matches api/insurance/:id
-router
-    .route("/:id")
-    .get(insuranceController.findById)
-    .put(insuranceController.update)
-    .delete(insuranceController.remove);
+// router
+//     .route("/:id")
+//     .get(insuranceController.findById)
+//     .put(insuranceController.update)
+//     .delete(insuranceController.remove);
     
 module.exports = router;
