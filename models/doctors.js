@@ -45,24 +45,22 @@ const docSchema = new Schema ({
         office_zip_code: {
             type: Number,
             required: true,
-            validate: input => {
-                if (input.length !== 5) {
-                    "Please enter the 5 digits for the zip code"
-                }
-            }
+            // validate: input => {
+            //     if (input.length !== 5) {
+            //         "Please enter the 5 digits for the zip code"
+            //     }
+            // }
         }, 
     },
     doctor_phone_number: {
         type: Number,
         required: true, 
-        validate: input => {
-            if (input.length !== 10) {
-                "Please enter the 10 digits for the doctor's phone number"
-            }
+        // //validate: input => {
+        //     if (input.length !== 10) {
+        //         "Please enter the 10 digits for the doctor's phone number"
+        //     }
         }
-    }
-    
-});
+    });
 
 const Doctors = ("Doctors", docSchema);
 

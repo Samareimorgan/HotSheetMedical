@@ -44,18 +44,25 @@ const usersSchema = new Schema ({
     email: {
         type: String,
         required: true,
-        // validate: { $regex: /@mongodb\.com$/ } 
+        validate: {
+            validator: function(v) {
+                return/@mongodb\.com$/.test(v);
+            }
+        }
     },
 
     phone: {
         type: Number,
-        required: true,
-        // validate:input => {
-        //     if (input.length !== 10) {
-        //         "Please enter the 10 digits for your phone number"
-        //     }
-        // }
+        validate: {
+            validator: function(v) {
+              return /\d{3}-\d{3}-\d{4}/.test(v);
+            },
+            message: props => `${props.value} is not a valid phone number!`
+          },
+          required: [true, 'User phone number required in 000-000-0000 format']
     },
+
+    
 
     birthdate: {
         type: Date,
@@ -70,53 +77,62 @@ const usersSchema = new Schema ({
     pin: {
         type: Number,
         required: true,
-        // validate:input => {
-        //     if (input.length !== 6) {
-        //         "Your PIN does not have 6 numbers"
-        //     }
-        // }
+        validate:{
+            validator: input => {
+                if (input.length !== 6) {
+                   return "Your PIN does not have 6 numbers"
+                }
+            }
+        }
     },
 
     password: {
         type: String,
         required: true,
+        validate:{
+            validator: input => {
+                if (input.length < 6) {
+                   return "Your PIN does not have  more than 6 characters"
+                }
+            }
+        }
         
     },
 
-    doctors: [ 
-        {
-            type: Schema.Types.ObjectId,
-            ref: "Doctors"
-        } 
-    ],
+    // doctors: [ 
+    //     {
+    //         type: Schema.Types.ObjectId,
+    //         ref: "Doctors"
+    //     } 
+    // ],
 
-    medications: [
-        {
-            type: Schema.Types.ObjectId, 
-            ref: "Medications"
-        }
-    ], 
+    // medications: [
+    //     {
+    //         type: Schema.Types.ObjectId, 
+    //         ref: "Medications"
+    //     }
+    // ], 
 
-    allergies:[
-        {
-            type: Schema.Types.ObjectId,
-            ref:"Allergies"
-        }
-    ],
+    // allergies:[
+    //     {
+    //         type: Schema.Types.ObjectId,
+    //         ref:"Allergies"
+    //     }
+    // ],
 
-    connections: [
-        {
-            type: Schema.Types.ObjectId, 
-            ref: "Connections"
-        }
-    ],
+    // connections: [
+    //     {
+    //         type: Schema.Types.ObjectId, 
+    //         ref: "Connections"
+    //     }
+    // ],
 
-    insurances: [
-        {
-            type: Schema.Types.ObjectId, 
-            ref: "Insurances"
-        }
-    ]
+    // insurances: [
+    //     {
+    //         type: Schema.Types.ObjectId, 
+    //         ref: "Insurances"
+    //     }
+    // ]
 
 });
     //Additional Items for Users in Next Iteration of Program 

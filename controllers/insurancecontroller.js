@@ -1,4 +1,4 @@
-const db = require("../models")
+const db = require("../models");
 
 //defining the methods for insurance db
 module.exports = {
@@ -35,7 +35,7 @@ module.exports = {
         db.Insurances
             .findbyId({_id: req.params.id})
             .then(dbModel => dbModel.remove())
-            .then(dbModel =res.json(dbModel))
+            .then(dbModel =>res.json(dbModel))
             .catch(err =>res.status(422).json(err))
     }
 }
