@@ -12,6 +12,7 @@
     "morgan": "^1.9.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-html-parser": "^2.0.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.2",
@@ -20,7 +21,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "start:dev":  "npm run client",
+    "start:dev": "npm run client",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd client && yarn install",
@@ -37,8 +38,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "nodemon": "^1.18.9",
-    "concurrently": "^4.1.0"
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9"
   },
   "description": "Bringing Patient Information to First Responders, Fast!",
   "main": "server.js",

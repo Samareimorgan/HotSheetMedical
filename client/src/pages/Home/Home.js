@@ -1,9 +1,10 @@
 import React, {Component} from "react";
 //import API from "../../utils/API";
-import EmergencyButton from "../../components/EmergencyButton";
+import EmergencyButton from "../../components/EmergencyButton/EmergencyButton";
 import NavBar from "../../components/NavBar/NavBar";
 import SideDrawer from "../../components/SideDrawer/SideDrawer";
 import Backdrop from "../../components/Backdrop/Backdrop";
+import Footer from "../../components/Footer/Footer";
 import "./home.css"
 
 class Home extends Component {
@@ -35,6 +36,9 @@ render() {
         <NavBar drawerClickHandler = {this.drawerToggleClickHandler}/>
         <SideDrawer show = {this.state.sideDrawerOpen}/>
         {backDrop}
+        <div className ="emergency-home-title">
+            <h2> Emergency Information</h2>
+        </div>
      
             <div className ="homeEmergencyBtns"> 
 
@@ -45,6 +49,7 @@ render() {
                 <EmergencyButton />
             
             </div>
+        <Footer />
     </div>
         );
     }
