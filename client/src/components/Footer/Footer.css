@@ -1,4 +1,4 @@
-.footer {
+.Footer {
     position: fixed; 
     bottom: 0px; 
     left: 0px;
@@ -8,29 +8,29 @@
     background: white;
 }
 
-.footer-navigation {
+.FooterNavigation {
     display: flex; 
     height: 100%; 
     align-items: center; 
 }
 
-.footer-navigation ul {
+.FooterNavigation ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex; 
 }
 
-.footer-navigation-items li{
-    padding: 0 1rem;
-    font-size: 12px; 
+.FooterNavigationItems li{
+    padding: 0 1.5rem;
+    font-size: 14px; 
 }
 
-.footer-navigation-items li a {
+.FooterNavigationItems li a {
     text-decoration: none;
 }
 
-.footer-navigation-items a:hover,
-.footer-navigation-items a:active {
+.FooterNavigationItems a:hover,
+.FooterNavigationItems a:active {
         color: rgb(255, 0, 43);
 }

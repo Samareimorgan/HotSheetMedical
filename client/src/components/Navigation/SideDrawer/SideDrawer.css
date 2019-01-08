@@ -1,53 +1,36 @@
-.side-drawer {
+.SideDrawer {
     height: 100%;
     background: white;
     box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
     position: fixed; 
     top: 0;
     left: 0;
-    width: 60%;
-    max-width: 300px;
+    width: 280px;
+    max-width: 60%;
     z-index: 200;
-    transform: translateX(-100%);
+    padding: 32px 16px;
+    box-sizing: border-box;
     transition: transform 0.3s ease-out;
+    display: flex; 
+    flex-flow: column;
+    align-items: center;
 }
-.side-drawer.open {
+.Open {
     transform: translateX(0);
-   
-}
-.side-drawer ul {
-    height: 50%;
-    list-style: none; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
 }
 
-.side-drawer li {
-    margin: 0.5rem 0;
+.Close {
+    transform: translateX(-100%);
 }
 
-.side-drawer a {
-    color: navy;
-    text-decoration: none;
-    font-size: 1.2rem;
+.Logo {
+    height: 12%;
 }
 
-.side-drawer a:hover, 
-.side-drawer a:active {
-    color: blue;
 
-}
 
-.side-drawer-logo {
-    margin-left: 10%;
-    margin-top: 5px; 
-    padding: 5px;
-    height: 4.5rem;
-
-}
-
-@media (min-width: 601px) {
-
+@media (min-width: 501px) {
+    .SideDrawer {
+        display: none;
+    }
 }

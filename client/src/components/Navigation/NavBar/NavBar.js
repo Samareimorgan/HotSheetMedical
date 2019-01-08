@@ -1,26 +1,17 @@
- import React from 'react';
-import "./NavBar.css";
-import DrawerToggleBtn from "../SideDrawer/DrawerToggleBtn";
-import logo from "./Logo/Hotsheetlogocolor.png";
+import React from 'react';
+// import DrawerToggleBtn from "../SideDrawer/DrawerToggleBtn";
+import Logo from "../../Logo/Logo";
+import NavigationItems from "../NavigationItems/NavigationItems";
+import classes from "./NavBar.css";
 
 const navbar = props => (
-    <header className = "navbar">
-        <nav className="navbar_navigation">
-            <div className = "navbar-toggle-button">
-                <DrawerToggleBtn click={props.drawerClickHandler}/>
-            </div>
-            <div className = "navigation-logo"> <a href="/"> <img className="logo" src={logo} alt ={"logo"}/></a></div>
-            <div className ="spacer"></div>
-            <div className ="navbar_navigation_items">
-                <ul>
-                    <li><a href ="/">Home</a></li>
-                    <li><a href ="/">Profile</a></li>
-                    <li><a href ="/">Settings</a></li>
-                    <li><a href ="/">Connections</a></li>
-                    <li><a href ="/">About</a></li>
-                    <li><a href ="/">Logout/LogIn</a></li>
-                </ul>
-            </div>
+    <header className = {classes.Navbar}>
+        <div>Menu</div>
+        <div className = {classes.Logo}>
+        <Logo />
+        </div>
+        <nav className ={classes.DesktopOnly}>
+            <NavigationItems />
         </nav>
     </header>
 ); 

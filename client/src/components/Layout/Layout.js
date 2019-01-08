@@ -1,17 +1,35 @@
-import React from "react";
+import React, {Component} from "react";
 import Auxiliary from "../../hoc/Auxiliary";
+import classes from "./Layout.css";
 import NavBar from "../Navigation/NavBar/NavBar";
-import Logo from "../Navigation/NavBar/Logo/Hotsheetlogocolor.png";
 import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
-import DrawerToggleBtn from "../Navigation/SideDrawer/DrawerToggleBtn";
-import Backdrop from "../Navigation/Backdrop/Backdrop";
+import Footer from "../Footer/Footer";
 
-const layout = (props) => (
-    <Auxiliary>
 
-    <div>NavBar, SideDrawer, Backdrop</div>
-    <main>{props.children}</main>
-    </Auxiliary>
-);
 
-export default layout;
+class Layout extends Component {
+    state = {
+        showSideDrawer: true, 
+    }
+
+    sideDrawerClosedHandler = () => {
+        this.setState({showSideDrawer: false});
+
+    }
+    render () {
+        return (
+        <Auxiliary>
+        <NavBar/>
+        <SideDrawer open={this.state.showSideDrawer} closed = {this.sideDrawerClosedHandler}/>
+        <main className = {classes.Content}>
+        {this.props.children}</main>
+    
+        <Footer />
+        </Auxiliary>
+        )
+    }
+
+    
+};
+
+export default Layout;

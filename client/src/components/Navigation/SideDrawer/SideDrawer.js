@@ -1,27 +1,30 @@
 import React from "react";
-import "./SideDrawer.css";
-import logo from "../NavBar/Logo/Hotsheetlogocolor.png";
+import classes from "./SideDrawer.css";
+import Logo from "../../Logo/Logo";
+import Auxiliary from "../../../hoc/Auxiliary";
+import NavigationItems from "../NavigationItems/NavigationItems";
+import Backdrop from "../Backdrop/Backdrop";
+
 
 const sideDrawer = props => {
-    let drawerClasses = "side-drawer";
-    if (props.show) {
-        drawerClasses = "side-drawer open";
+    let attachedClasses = [classes.SideDrawer, classes.Close];
+    if (props.open) {
+        attachedClasses = [classes.SideDrawer, classes.Open];
     }
     
     return (
-    <nav className = {drawerClasses}>
-    <img src = {logo} alt={"logo"} className ="side-drawer-logo"/>
-        <ul>
-        
-            <li><a href ="/">Home</a></li>
-            <li><a href ="/Profile">Profile</a></li>
-            <li><a href ="/Settings">Settings</a></li>
-            <li><a href ="/Connections">Connections</a></li>
-            <li><a href ="/About">About</a></li>
-            <li><a href ="/Login/Logout">Logout/LogIn</a></li>
-        
-        </ul>
-    </nav>
+    <Auxiliary>
+    <Backdrop show={props.open} clicked={props.closed}/>
+    <div className ={attachedClasses.join(' ')}>
+        <div className = {classes.Logo}>
+            <Logo />
+         
+            <nav className ={classes.NavigationItems}>
+                <NavigationItems />
+            </nav>
+        </div>
+    </div>
+    </Auxiliary>
 )
 };
 
