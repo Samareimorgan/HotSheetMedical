@@ -9,17 +9,21 @@ import Footer from "../Footer/Footer";
 
 class Layout extends Component {
     state = {
-        showSideDrawer: true, 
+        showSideDrawer: true 
     }
 
     sideDrawerClosedHandler = () => {
         this.setState({showSideDrawer: false});
 
     }
+
+    sideDrawerToggleHandler = () => {
+        this.setState({showSideDrawer: true});
+    }
     render () {
         return (
         <Auxiliary>
-        <NavBar/>
+        <NavBar toggleOpen = {this.sideDrawerToggleHandler}/>
         <SideDrawer open={this.state.showSideDrawer} closed = {this.sideDrawerClosedHandler}/>
         <main className = {classes.Content}>
         {this.props.children}</main>
