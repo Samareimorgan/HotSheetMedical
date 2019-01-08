@@ -3,7 +3,7 @@ import classes from "./LogIn.css";
 
 
 
-class LogIn extends Component {
+class Login extends Component {
 
     constructor(props) {
         super(props);
@@ -19,16 +19,16 @@ class LogIn extends Component {
     <div className = {classes.InnerContainer}>
         <div className ={classes.Box}> 
             <div className = {classes.InputGroup}>
-                <label htmlFor="username">Username</label>
+                <label htmlFor="username" className ={classes.LoginLabel}>Username</label>
                 <input type = "text" name = "username" className = {classes.LogInInput} placeholder = "Username"/>
             </div>
 
             <div className = {classes.InputGroup}>
                 <label htmlFor="password">Password</label>
-                <input type = "password" name = "password" className = {classes.LogInInput} placeholder = "Password"/>
+                <input type = "password" name = "password" className = {classes.LoginInput} placeholder = "Password"/>
             </div>
 
-            <button type = "button" className={classes.LogInBtn} onClick = {this.submitLogin}>Login</button>
+            <button type = "button" className={classes.LoginBtn} onClick = {this.submitLogin}>Login</button>
         </div>
      </div>
 
@@ -36,4 +36,4 @@ class LogIn extends Component {
  }
 };
 
-export default LogIn; 
+export default Login; 
