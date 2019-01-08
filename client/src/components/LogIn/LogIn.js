@@ -17,6 +17,9 @@ class Login extends Component {
     render() {
     return( 
     <div className = {classes.InnerContainer}>
+     <div> className = {classes.BoxHeader}>
+        Register 
+        </div>
         <div className ={classes.Box}> 
             <div className = {classes.InputGroup}>
                 <label htmlFor="username" className ={classes.LoginLabel}>Username</label>

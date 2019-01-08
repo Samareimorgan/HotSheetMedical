@@ -2,6 +2,16 @@
     transition: visibility 0.2s ease-out;
 }
 
+.BoxHeader {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 17px;
+    font-family: Ozxgen, sans-serif;
+    font-size: 22px;
+    border-bottom: 2px solid black;
+
+}
+
 .InnerContainer.show {
     visibility: visible;
 }
