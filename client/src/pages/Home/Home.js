@@ -7,29 +7,10 @@ import Footer from "../../components/Footer/Footer";
 import "./home.css"
 
 class Home extends Component {
-    // state = {
-    //     sideDrawerOpen: false
-    // };
-
-    // drawerToggleClickHandler = () => {
-    //     this.setState((prevState) => {
-    //         return{sideDrawerOpen: !prevState.sideDrawerOpen};
-    //     });
-    // };
-
-    // backDropClickHandler = () => {
-    //     this.setState({sideDrawerOpen:false});
-    // };
+  
 
 
 render() {
-     
-    // let backDrop;
-    
-    // if(this.state.sideDrawerOpen) {
-        
-    //     backDrop = <Backdrop click = {this.backDropClickHandler}/>
-    // }
     return (
     <div>
         <Layout />

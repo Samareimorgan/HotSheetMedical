@@ -1,9 +1,8 @@
 import React, {Component} from "react";
-import classes from "./LogIn.css";
+import classes from "./Register.css";
 
 
-
-class LogIn extends Component {
+class Register extends Component {
 
     constructor(props) {
         super(props);
@@ -11,12 +10,15 @@ class LogIn extends Component {
 
     }
 
-    submitLogin = props=> {
+    submitRegister = props=> {
 
     }
     render() {
     return( 
     <div className = {classes.InnerContainer}>
+        <div> className = {classes.BoxHeader}>
+        Register 
+        </div>
         <div className ={classes.Box}> 
             <div className = {classes.InputGroup}>
                 <label htmlFor="username">Username</label>
@@ -28,7 +30,7 @@ class LogIn extends Component {
                 <input type = "password" name = "password" className = {classes.LogInInput} placeholder = "Password"/>
             </div>
 
-            <button type = "button" className={classes.LogInBtn} onClick = {this.submitLogin}>Login</button>
+            <button type = "button" className={classes.LogInBtn} onClick = {this.submitRegister}>Login</button>
         </div>
      </div>
 
@@ -36,4 +38,4 @@ class LogIn extends Component {
  }
 };
 
-export default LogIn; 
+export default Register; 
