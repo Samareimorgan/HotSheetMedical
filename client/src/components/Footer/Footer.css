@@ -1,0 +1,36 @@
+.Footer {
+    position: fixed; 
+    bottom: 0px; 
+    left: 0px;
+    width: 100%;
+    height: 50px; 
+    color: navy;
+    background: white;
+}
+
+.FooterNavigation {
+    display: flex; 
+    height: 100%; 
+    align-items: center; 
+}
+
+.FooterNavigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.FooterNavigationItems li{
+    padding: 0 1.5rem;
+    font-size: 14px; 
+}
+
+.FooterNavigationItems li a {
+    text-decoration: none;
+}
+
+.FooterNavigationItems a:hover,
+.FooterNavigationItems a:active {
+        color: rgb(255, 0, 43);
+}
