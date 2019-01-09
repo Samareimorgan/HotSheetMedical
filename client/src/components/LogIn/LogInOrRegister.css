@@ -1,5 +1,7 @@
 .MainContainer {
     width: 100%; 
+    padding-top: 10px;
+    padding-bottom: 10px;
     height: 100%; 
     display: flex; 
     justify-content: center;
@@ -29,6 +31,7 @@
     line-height: 2;
     cursor: pointer;
 }
+
 
 .BoxContainer {
     display: flex; 

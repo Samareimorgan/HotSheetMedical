@@ -3,8 +3,7 @@ import React, {Component} from "react";
 import EmergencyButton from "../../components/EmergencyButton/EmergencyButton";
 import Layout from "../../components/Layout/Layout";
 
-import Footer from "../../components/Footer/Footer";
-import "./home.css"
+import classes from "./home.css"
 
 class Home extends Component {
   
@@ -13,13 +12,13 @@ class Home extends Component {
 render() {
     return (
     <div>
-        <Layout />
+        <Layout>
      
-        <div className ="emergency-home-title">
+        <div className ={classes.EmergencyHomeTitle}>
             <h2> Emergency Information</h2>
         </div>
      
-            <div className ="homeEmergencyBtns"> 
+            <div className ={classes.HomeEmergencyBtns}> 
 
                 <EmergencyButton />
                 <EmergencyButton />
@@ -28,7 +27,7 @@ render() {
                 <EmergencyButton />
             
             </div>
-        <Footer />
+        </Layout>
     </div>
         );
     }

@@ -16,21 +16,26 @@ class Register extends Component {
     render() {
     return( 
     <div className = {classes.InnerContainer}>
-        <div> className = {classes.BoxHeader}>
+        <div className = {classes.BoxHeader}>
         Register 
         </div>
         <div className ={classes.Box}> 
             <div className = {classes.InputGroup}>
-                <label htmlFor="username">Username</label>
-                <input type = "text" name = "username" className = {classes.LogInInput} placeholder = "Username"/>
+                <label htmlFor="username" className ={classes.RegisterLabel}>Username</label>
+                <input type = "text" name = "username" className = {classes.RegisterInput} placeholder = "Username"/>
             </div>
 
             <div className = {classes.InputGroup}>
-                <label htmlFor="password">Password</label>
-                <input type = "password" name = "password" className = {classes.LogInInput} placeholder = "Password"/>
+                <label htmlFor="email" className ={classes.RegisterLabel}>Email</label>
+                <input type = "email" name = "email" className = {classes.RegisterInput} placeholder = "Email"/>
             </div>
 
-            <button type = "button" className={classes.LogInBtn} onClick = {this.submitRegister}>Login</button>
+            <div className = {classes.InputGroup}>
+                <label htmlFor="password" className ={classes.RegisterLabel}>Password</label>
+                <input type = "password" name = "password" className = {classes.RegisterInput} placeholder = "Password"/>
+            </div>
+
+            <button type = "button" className={classes.RegisterBtn} onClick = {this.submitRegister}>Register</button>
         </div>
      </div>
 

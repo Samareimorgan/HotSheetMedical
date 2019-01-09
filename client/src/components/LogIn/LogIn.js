@@ -17,17 +17,17 @@ class Login extends Component {
     render() {
     return( 
     <div className = {classes.InnerContainer}>
-     <div> className = {classes.BoxHeader}>
-        Register 
+     <div className = {classes.BoxHeader}>
+       Login
         </div>
         <div className ={classes.Box}> 
             <div className = {classes.InputGroup}>
                 <label htmlFor="username" className ={classes.LoginLabel}>Username</label>
-                <input type = "text" name = "username" className = {classes.LogInInput} placeholder = "Username"/>
+                <input type = "text" name = "username" className = {classes.LoginInput} placeholder = "Username"/>
             </div>
 
             <div className = {classes.InputGroup}>
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password" className ={classes.LoginLabel}>Password</label>
                 <input type = "password" name = "password" className = {classes.LoginInput} placeholder = "Password"/>
             </div>
 

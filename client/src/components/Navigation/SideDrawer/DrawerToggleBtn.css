@@ -21,3 +21,9 @@
     width: 30px;
     background: navy;
 }
+
+@media(min-width: 600px) {
+    .ToggleButton {
+        display: none;
+}
+}

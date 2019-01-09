@@ -22,14 +22,14 @@
     height: 90%;
 }
 
-@media (max-width:499px) {
+@media (max-width:600px) {
     .DesktopOnly{
         display: none;
     }
 }
 
-@media (min-width:701px) {
-    .navbar-toggle-button {
+@media (min-width:599px) {
+    .ToggleBtn {
         display:none;
     }
 }
