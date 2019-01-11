@@ -1,7 +1,7 @@
 import React from "react";
 import classes from"./Footer.css";
 
-const footer = props => (
+const footer = () => (
     <footer className = {classes.Footer}>
         <div className ={classes.FooterNavigation}>
             <ul className ={classes.FooterNavigationItems}>

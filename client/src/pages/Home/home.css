@@ -7,7 +7,7 @@ body {
     height: 100%;
 }
 
-.emergency-home-title {
+.EmergencyHomeTitle {
     color: white; 
     font-size: 24px; 
     margin-top: 25%;
@@ -16,7 +16,7 @@ body {
 }
 
 
-.homeEmergencyBtns {
+.HomeEmergencyBtns {
     margin-top: 15%;
     margin-left: 20%;
 

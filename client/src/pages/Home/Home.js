@@ -3,42 +3,22 @@ import React, {Component} from "react";
 import EmergencyButton from "../../components/EmergencyButton/EmergencyButton";
 import Layout from "../../components/Layout/Layout";
 
-import Footer from "../../components/Footer/Footer";
-import "./home.css"
+import classes from "./home.css"
 
 class Home extends Component {
-    // state = {
-    //     sideDrawerOpen: false
-    // };
-
-    // drawerToggleClickHandler = () => {
-    //     this.setState((prevState) => {
-    //         return{sideDrawerOpen: !prevState.sideDrawerOpen};
-    //     });
-    // };
-
-    // backDropClickHandler = () => {
-    //     this.setState({sideDrawerOpen:false});
-    // };
+  
 
 
 render() {
-     
-    // let backDrop;
-    
-    // if(this.state.sideDrawerOpen) {
-        
-    //     backDrop = <Backdrop click = {this.backDropClickHandler}/>
-    // }
     return (
     <div>
-        <Layout />
+        <Layout>
      
-        <div className ="emergency-home-title">
+        <div className ={classes.EmergencyHomeTitle}>
             <h2> Emergency Information</h2>
         </div>
      
-            <div className ="homeEmergencyBtns"> 
+            <div className ={classes.HomeEmergencyBtns}> 
 
                 <EmergencyButton />
                 <EmergencyButton />
@@ -47,7 +27,7 @@ render() {
                 <EmergencyButton />
             
             </div>
-        <Footer />
+        </Layout>
     </div>
         );
     }

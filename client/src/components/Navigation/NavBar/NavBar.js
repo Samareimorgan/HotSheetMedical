@@ -8,7 +8,7 @@ import classes from "./NavBar.css";
 
 const navbar = props => (
     <header className = {classes.Navbar}>
-        <div >
+        <div className ={classes.ToggleBtn}>
             <DrawerToggleBtn clicked = {props.toggleOpen}/>
         </div>
         <div className = {classes.Logo}>
