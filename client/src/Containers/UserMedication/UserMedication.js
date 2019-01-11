@@ -1,20 +1,41 @@
 import React, {Component} from "react";
 import unirest from "unirest";
+import classes from "./UserMedication.css";
+import Option from "./Option";
+require('dotenv').config();
 
 class UserMedication extends Component {
-    componentDidMount () {
-        unirest.get('https://iterar-mapi-us.p.mashape.com/api/autocomplete/?query=res')
-        .header("X-Mashape-Key", "vbsm1GCB6dmshJGhRlhJ0XA5A5Ynp1DiG5UjsnSr5teRHlzNB2")
-        .header("Accept", "application/json")
-        .end(function (result) {
-          console.log(result.status, result.headers, result.body);
-        });
-            
+    state = {
+        suggestions: []
     }
+    
+    componentDidMount() {
+    const API_KEY = process.env.REACT_APP_MAPI_API_KEY;
+    console.log({API_KEY});
+        unirest.get("https://iterar-mapi-us.p.mashape.com/api/autocomplete?query=res")
+        .header("X-Mashape-Key", {API_KEY})
+        .header("Accept", "application/json")
+        .end (result => {
+                const response = result.body;
+                    this.setState({suggestions: response.suggestions})
 
+      console.log(response.suggestions[0]);
+         
+        });
+        
+       
+    }
+    
     render () {
+        const suggestions = this.state.suggestions.map((suggestion, index) => {
+            return <Option medication={suggestion} key={index}/>
+        })
         return(
-            <div></div>
+            <div>
+                <section className = {classes.Suggestions}>
+                    {suggestions}
+                </section>
+            </div>
         );
 
     }

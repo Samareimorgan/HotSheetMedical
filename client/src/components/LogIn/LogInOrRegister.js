@@ -11,43 +11,55 @@ class LogInOrRegister extends Component{
         super(props);
         this.state ={ 
             isLoginOpen: true,
-            isRegisterOpen: false
-        };
+            isRegisterOpen: false,
+            // activeClass1: classes.SelectedContoller, 
+            // activeClass2: classes.Controller
+            
+        }
     }
+
     showLoginBox =() => {
-        this.setState({isLoginOpen: true, isRegisterOpen: false})
+        this.setState({isLoginOpen: true, isRegisterOpen: false});
+      
+        
         
     }
+
     showRegisterBox =() =>  {
         this.setState({isRegisterOpen: true, isLoginOpen:false});
     }
 
+    // toggleClasses = () => {
+    //     if(this.state({isRegisterOpen: false, isLoginOpen:true})) {
+    //         this.setState({activeClass1:classes.SelectedController, activeClass2:classes.Controller})
+    //     } else if (this.state({isRegisterOpen: true, isLoginOpen:false}))
+    //         this.setState({activeClass1:classes.Controller, activeClass2:classes.SelectedController})
+    // }
 
 
     render() {
-    return(
-    <Auxiliary> 
-        <Modal> 
-            <div className = {classes.MainContainer}>
-             <div className = {classes.BoxController}>
-                <div className = {classes.Controller} onClick ={this.showLoginBox}>
-                Login
-                </div>
-                <div className = {classes.Controller} onClick = {this.showRegisterBox}>
-                Register
-                </div>
-             </div>
-             <div className = {classes.BoxContainer}> 
-                {this.state.isLoginOpen && <Login />}
-                {this.state.isRegisterOpen && <Register />}
-             </div>
-            </div>
-        </Modal>
+        return (
+            <Auxiliary> 
+                <Modal> 
+                    <div className = {classes.MainContainer}>
+                    <div className = {classes.BoxController}>
+                        <div className = {classes.Controller} onClick = {this.showLoginBox} {...this.toggleclass}> Login
+                        </div>
+                        <div className = {classes.Controller} onClick = {this.showRegisterBox}>
+                        Register
+                        </div>
+                    </div>
+                    <div className = {classes.BoxContainer}> 
+                        {this.state.isLoginOpen && <Login />}
+                        {this.state.isRegisterOpen && <Register />}
+                    </div>
+                    </div>
+                </Modal>
 
-    </Auxiliary>
+            </Auxiliary>
 
-    )
- }
+        )
+    }
 };
 
 export default LogInOrRegister;
