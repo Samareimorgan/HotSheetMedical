@@ -4,22 +4,27 @@ import Auxiliary from "./hoc/Auxiliary";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from "./pages/Home/Home.js";
 import UserProfile from "./pages/UserProfile/UserProfile";
+import DatabaseEdit from "./pages/DatabaseEdit/DatabaseEdit";
+import LoginOrRegister from "./pages/LoginOrRegister/LoginOrRegister";
 
 const App = () => (
 <Auxiliary>
   <Layout>
-    <p>test</p>
-  </Layout>
+    
+ 
     <Router>
       <div>
-        <Switch>
           <Route exact path = "/" component={Home} />
-          </Switch>
-        <Switch>
-          <Route exact page = "/UserProfile" component = {UserProfile} />
-        </Switch>
-      </div>
+    
+          <Route path = "/DatabaseEdit" component = {DatabaseEdit} />
+       
+          <Route  path = "/UserProfile" component = {UserProfile} />
+      
+          <Route  path = "/LoginOrRegister" component = {LoginOrRegister} />
+        </div>
     </Router>
+
+    </Layout>
   </Auxiliary>
 );
 

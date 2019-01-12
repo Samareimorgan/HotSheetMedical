@@ -1,0 +1,13 @@
+.Suggestions {
+    width: 10rem;
+    height: 25px;
+    
+}
+
+.Medication {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 10%;
+}
+
