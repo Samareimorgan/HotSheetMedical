@@ -1,40 +1,78 @@
 import React, {Component} from "react";
 import unirest from "unirest";
 import classes from "./UserMedication.css";
-import Option from "./Option";
-require('dotenv').config();
+import Modal from "../../components/Modal/Modal";
+console.log(process.env);
 
 class UserMedication extends Component {
-    state = {
-        suggestions: []
-    }
-    
-    componentDidMount() {
-    const API_KEY = process.env.REACT_APP_MAPI_API_KEY;
-    console.log({API_KEY});
-        unirest.get("https://iterar-mapi-us.p.mashape.com/api/autocomplete?query=res")
-        .header("X-Mashape-Key", {API_KEY})
-        .header("Accept", "application/json")
-        .end (result => {
-                const response = result.body;
-                    this.setState({suggestions: response.suggestions})
+    constructor (props) {
+        super(props);
+        this.state = {
+            suggestions: [],
+            value: "res"
+        }
+        this.medicationInputHandler = this.medicationInputHandler.bind(this);
 
-      console.log(response.suggestions[0]);
-         
-        });
+    }
+
+    saveMed = (info) => {
+        unirest.post("/api/users/save", info);
+    }
+
+
+    
+
+    medicationInputHandler = (event) => {
         
-       
+    
+        let query = event.target.value;
+        
+        const API_KEY = process.env.REACT_APP_MAPI_API_KEY;
+      
+        
+        if(query.length === 3) {
+            
+            console.log("Triggered");
+            unirest.get("https://iterar-mapi-us.p.mashape.com/api/autocomplete?query=" + query)
+            .header("X-Mashape-Key", API_KEY)
+            .header("Accept", "application/json")
+            .end(result => {
+                console.log(result.body);
+                        const response = result.body
+                        this.setState({suggestions: response.suggestions, value: query});
+        });
+
+        } else {
+            this.setState({value:event.target.value})
+        }
+        
+    
     }
     
-    render () {
-        const suggestions = this.state.suggestions.map((suggestion, index) => {
-            return <Option medication={suggestion} key={index}/>
+    
+    render () 
+    {
+        let suggestions;
+        if(this.state.suggestions) {
+            suggestions = this.state.suggestions.map((suggestion) => {
+            return (
+               <option key = {suggestion}>
+                {suggestion}
+               </option>
+            )
         })
+    }
         return(
-            <div>
-                <section className = {classes.Suggestions}>
+            
+            <div className = {classes.Medication}>
+             <Modal>
+                <input type = "text" value={this.state.value} onChange = {this.medicationInputHandler} placeholder="Input the first 3 letters of your medication" ></input>
+                <select className = {classes.Suggestions}>
                     {suggestions}
-                </section>
+                </select>
+                
+                <button type = "submit" className={classes.MedicationSave}>SAVE</button>
+                </Modal>
             </div>
         );
 

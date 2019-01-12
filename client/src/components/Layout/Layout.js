@@ -4,7 +4,6 @@ import classes from "./Layout.css";
 import NavBar from "../Navigation/NavBar/NavBar";
 import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
 import Footer from "../Footer/Footer";
-import LoginOrRegister from "../LogIn/LogInOrRegister";
 
 
 
@@ -25,7 +24,6 @@ class Layout extends Component {
         return (
         <Auxiliary>
         <NavBar toggleOpen = {this.sideDrawerToggleHandler}/>
-        <LoginOrRegister />
         <SideDrawer open={this.state.showSideDrawer} closed = {this.sideDrawerClosedHandler}/>
         <main className = {classes.Content}>
         {this.props.children}</main>
