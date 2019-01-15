@@ -6,8 +6,11 @@
 
 .Medication {
     display: flex;
-    flex-direction: column;
-    width: 20%;
-    padding: 10%;
+    align-items: center;
+    color: firebrick;
 }
 
+.MedicationInput {
+    height: 20px;
+    width: 10rem;
+}

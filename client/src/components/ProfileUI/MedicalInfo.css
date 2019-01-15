@@ -1,0 +1,32 @@
+.MedicalInfoContainer {
+    box-sizing: border-box;
+    border: 2px solid black;
+    color: navy;
+    background-color: white;
+    width: 90%;
+    margin: 5%;
+    font-size: 14px; 
+}
+
+.MedicalInfoHeader h2 {
+    display: flex; 
+    justify-content: center;
+    font-size: 20px;
+    font-family: Lora sans-serif;
+    color: white;
+}
+.MedicalInfoContainer h3 {
+    font-size: 15px; 
+    margin: 5px;
+}
+
+.MedicalInfoContainer p {
+    padding-left: 5px; 
+}
+
+button {
+    padding: 2px; 
+    background-color: firebrick;
+    color: white;
+    border: 1px solid black;
+}

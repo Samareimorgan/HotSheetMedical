@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import unirest from "unirest";
 import classes from "./UserMedication.css";
 import Modal from "../../components/Modal/Modal";
+
 console.log(process.env);
 
 class UserMedication extends Component {
@@ -63,17 +64,22 @@ class UserMedication extends Component {
         })
     }
         return(
-            
             <div className = {classes.Medication}>
-             <Modal>
-                <input type = "text" value={this.state.value} onChange = {this.medicationInputHandler} placeholder="Input the first 3 letters of your medication" ></input>
-                <select className = {classes.Suggestions}>
-                    {suggestions}
-                </select>
-                
-                <button type = "submit" className={classes.MedicationSave}>SAVE</button>
+                <Modal>
+                    <h3> Medication Lookup</h3>  
+                    
+                    <input type = "text" value={this.state.value} data-tip="Input the first 3 letters of your medication" onChange = {this.medicationInputHandler} className={classes.MedicationInput}></input>
+                   
+                    <hr/>
+                    <select className = {classes.Suggestions}>
+                        {suggestions}
+                    </select>
+                    <hr/>
+                    
+                    <button type = "submit" className={classes.MedicationSave}>SAVE</button>
                 </Modal>
             </div>
+            
         );
 
     }

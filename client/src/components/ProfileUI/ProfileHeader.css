@@ -1,0 +1,21 @@
+.Profile {
+    display: flex; 
+    /* color: white */
+    background-color: white;
+    /* flex-direction:column; */
+    justify-content: center;
+    height: 55px; 
+}
+
+.Name h2 {
+    padding: 0;
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: Lora sans-serif;
+    justify-content: center;
+    color: firebrick;
+}
+
+
+
+
