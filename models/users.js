@@ -74,16 +74,16 @@ const usersSchema = new Schema ({
         // }
     },
 
-    pin: {
-        type: Number,
-        required: true,
-        validate:{
-            validator: input => {
-                if (input.length !== 6) {
-                   return "Your PIN does not have 6 numbers"
-                }
-            }
-        }
+    // pin: {
+    //     type: Number,
+    //     required: true,
+    //     validate:{
+    //         validator: input => {
+    //             if (input.length !== 6) {
+    //                return "Your PIN does not have 6 numbers"
+    //             }
+    //         }
+    //     }
     },
 
     password: {
@@ -99,26 +99,26 @@ const usersSchema = new Schema ({
         
     },
 
-    // doctors: [ 
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref: "Doctors"
-    //     } 
-    // ],
+    doctors: [ 
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Doctors"
+        } 
+    ],
 
-    // medications: [
-    //     {
-    //         type: Schema.Types.ObjectId, 
-    //         ref: "Medications"
-    //     }
-    // ], 
+    medications: [
+        {
+            type: Schema.Types.ObjectId, 
+            ref: "Medications"
+        }
+    ], 
 
-    // allergies:[
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref:"Allergies"
-    //     }
-    // ],
+    allergies:[
+        {
+            type: Schema.Types.ObjectId,
+            ref:"Allergies"
+        }
+    ],
 
     // connections: [
     //     {

@@ -23,7 +23,10 @@ const App = () => (
           <Route  path = "/LoginOrRegister" component = {LoginOrRegister} />
         </div>
     </Router>
-
+    <hr />
+    <hr />
+    <hr />
+    <hr />
     </Layout>
   </Auxiliary>
 );

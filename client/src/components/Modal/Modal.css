@@ -1,15 +1,18 @@
 .Modal {
-    position: fixed; 
+    position: absolute;
     background-color: white;
     z-index: 500; 
-    width: 60%;
+    width: 70%;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px grey;
     padding: 10px; 
-    left: 10%;
+    left: 15%;
     top: 10%;
     box-sizing: border-box; 
     transition: all 0.3x ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media (min-width: 600px) {
