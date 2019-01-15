@@ -12,14 +12,14 @@ const medSchema = new Schema ({
         type: String, 
         trim: true
     },
-    medDose: {
-        type: String
+    // medDose: {
+    //     type: String
 
-    },
+    // },
 
-    medTimes: {
-        type: String
-    }
+    // medTimes: {
+    //     type: String
+    // }
 })
 
 const Medications =mongoose.connect("Medications", medSchema);

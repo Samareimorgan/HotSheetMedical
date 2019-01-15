@@ -67,11 +67,15 @@ const usersSchema = new Schema ({
     birthdate: {
         type: Date,
         required: true,
-        // validate: input => {
-        //     if (input.length !== 8) {
-        //         "Please enter 8 digits for your full birthdate"
-        //     }
-        // }
+        validate:{
+            validator: input => {
+                if (input.length <10) {
+                   return "Please enter your full birthdate. mm-dd-yyyy"
+                } else if (input.length >10) {
+                    return "You have too many digits in your birthdate"
+                }
+            }
+        }
     },
 
     // pin: {
@@ -84,7 +88,7 @@ const usersSchema = new Schema ({
     //             }
     //         }
     //     }
-    },
+    // },
 
     password: {
         type: String,
