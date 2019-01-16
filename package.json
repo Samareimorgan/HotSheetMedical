@@ -1,6 +1,9 @@
 {
   "name": "hotsheetmedical",
   "version": "0.1.0",
+  "engines": {
+    "node": "8.11.3"
+  },
   "private": true,
   "dependencies": {
     "@babel/core": "^7.0.0",
@@ -11,6 +14,7 @@
     "express": "^4.16.4",
     "express-router": "^0.0.1",
     "if-env": "^1.0.4",
+    "jsesc": "^2.5.1",
     "mongoose": "^5.4.1",
     "morgan": "^1.9.1",
     "react": "^16.7.0",
@@ -43,6 +47,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.9"

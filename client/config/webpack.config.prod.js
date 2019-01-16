@@ -176,10 +176,10 @@ module.exports = {
                       loader: require.resolve('css-loader'),
                       options: {
                         importLoaders: 1,
-                        minimize: true,
+                        minimize: false,
                         sourceMap: shouldUseSourceMap,
                         modules: true, 
-                  localIdentName: '[name]__[local]__[has:base64:5]'
+                        localIdentName: '[name]__[local]__[has:base64:5]'
                       },
                     },
                     {
