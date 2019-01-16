@@ -62,6 +62,6 @@ const docSchema = new Schema ({
         }
     });
 
-const Doctors = ("Doctors", docSchema);
+const Doctors = mongoose.model("Doctors", docSchema);
 
 module.exports = Doctors;
