@@ -11,7 +11,7 @@ const medSchema = new Schema ({
     medName: {
         type: String, 
         trim: true
-    },
+    }
     // medDose: {
     //     type: String
 
@@ -22,6 +22,6 @@ const medSchema = new Schema ({
     // }
 })
 
-const Medications =mongoose.connect("Medications", medSchema);
+const Medications = mongoose.model("Medications", medSchema);
 
 module.exports = Medications;

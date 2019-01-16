@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 // Empties the db collections and inserts the seeds below
-//To SEED Heroku/mLab, run in the root folder: '$ heroku run node scripts/seedDB.js'
+//Heroku/mLab,  '$ heroku run node scripts/seedDB.js'
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://locacalhost:27017/hotsheetmedical"
+  "mongodb://localhost/hotsheetmedical", { useNewUrlParser: true }
 );
 
 //Add seeds for the Users
@@ -41,11 +41,11 @@ const userSeed = [
 
 
 db.Users
-  .remove({})
+  .deleteMany({})
   .then(() => db.Users.collection.insertMany(userSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
-    process.exit(0);
+    // process.exit(0);
   })
   .catch(err => {
     console.error(err);
@@ -54,24 +54,23 @@ db.Users
 
   // Add seeds for Medication Collection
   const medSeed = [
-    {
-      medName: "Tylenol"
+    { medName: "Tylenol"
     },
     {medName: "Lipitor"},
     {medName: "Vitamin B12"}
   ];
 
-  db.Medication
-  .remove({})
-  .then(() => db.Medication.collection.insertMany(medSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+  db.Medications
+    .deleteMany({})
+    .then(() => db.Medications.collection.insertMany(medSeed))
+    .then(data => {
+      console.log(data.result.n + " records inserted!");
+      // process.exit(0);
+    })
+    .catch(err => {
+      console.error(err);
+      process.exit(1);
+    });
 
   // Add seeds for Allergies Collection
   const allergySeed = [
@@ -83,11 +82,11 @@ db.Users
   ];
 
   db.Allergies
-  .remove({})
+  .deleteMany({})
   .then(() => db.Allergies.collection.insertMany(allergySeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
-    process.exit(0);
+    // process.exit(0);
   })
   .catch(err => {
     console.error(err);
@@ -130,11 +129,11 @@ db.Users
   ];
 
   db.Doctors
-  .remove({})
+  .deleteMany({})
   .then(() => db.Doctors.collection.insertMany(doctorsSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
-    process.exit(0);
+    // process.exit(0);
   })
   .catch(err => {
     console.error(err);
