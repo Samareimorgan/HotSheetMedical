@@ -4,25 +4,33 @@ import QRCode from "../../components/QRCode/QRCode";
 import HotSheetButton from "../../components/HotSheetButton/HotSheetButton";
 
 
-class QRcode extends Component {
-
+class Qrcode extends Component {
+    // constructor(props) {
+    //     super(props) 
+    //         state = {
+    //             name: this.props.name
+    //         }
+        
+    // }
    
-
+ 
 
 render () {
 
     return (
-        <div>
-            <span>Patient Name{this.props.name}</span>
-            <QRCode />
+        <div className ={classes.QrCodeDiv}>
 
-            <HotSheetButton />
+            <h2>Samantha Johnston</h2>
+            
+
+            <QRCode /> 
+            <HotSheetButton link = "/HotSheetData"/>
 
         </div>
         
     )
 }
 
-}
+};
 
-export default QRCode; 
+export default Qrcode; 

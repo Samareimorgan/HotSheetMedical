@@ -1,12 +1,13 @@
 import React from "react";
-import {Button}from "reactstrap";
+
 import classes from "./HotSheetButton.css";
 
-const hotSheetButton = props => (
-
+const hotSheetButton = props => {
+return(
     <div >
-        <Button className ={classes.HotSheetBtn}>Go To HotSheet <i className="fas fa-fire"></i></Button>
+        <button className ={classes.HotSheetBtn}>Go To HotSheet  <i class="fas fa-fire"></i> </button>
     </div>
 )
+}
 
 export default hotSheetButton;

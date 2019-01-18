@@ -1,0 +1,14 @@
+.QrCodeDiv {
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.QrCodeDiv h2 {
+    color: white;
+    font-size: 22px;
+    padding: 5px; 
+    margin: 0px;
+}

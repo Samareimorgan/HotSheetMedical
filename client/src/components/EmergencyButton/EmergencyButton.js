@@ -5,7 +5,8 @@ import classes from "./EmergencyButton.css";
 const EmergencyButton = props => {
   return (
     
-    <Button  className={classes.EmergencyBtn} > {props.name} </Button>
+    <a href = {props.link}>
+     <Button  className={classes.EmergencyBtn} > {props.name} </Button> </a>
    
   );
 };

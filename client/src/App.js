@@ -1,12 +1,13 @@
 import React from 'react';
 import Layout from './components/Layout/Layout';
 import Auxiliary from "./hoc/Auxiliary";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import Home from "./pages/Home/Home.js";
 import UserProfile from "./pages/UserProfile/UserProfile";
 import DatabaseEdit from "./pages/DatabaseEdit/DatabaseEdit";
 import LoginOrRegister from "./pages/LoginOrRegister/LoginOrRegister";
-import QRcode from "./pages/QRCode/QRCode";
+import Qrcode from "./pages/QRCode/QRCode";
+
 
 
 const App = () => (
@@ -24,7 +25,7 @@ const App = () => (
       
           <Route  path = "/LoginOrRegister" component = {LoginOrRegister} />
 
-          <Route  path = "/QRCode" component = {QRcode} />
+          <Route  path = "/QRCode" component = {Qrcode} />
         </div>
     </Router>
     
