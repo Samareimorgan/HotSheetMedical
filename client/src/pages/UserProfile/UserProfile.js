@@ -28,7 +28,10 @@ const userProfile = (props) => {
             medicationslist = "vitamin B12, Lipitor"
             />
 
-
+                <hr />
+                <hr />
+                <hr />
+                <hr />
             
         
         </Auxiliary>

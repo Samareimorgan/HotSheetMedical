@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home.js";
 import UserProfile from "./pages/UserProfile/UserProfile";
 import DatabaseEdit from "./pages/DatabaseEdit/DatabaseEdit";
 import LoginOrRegister from "./pages/LoginOrRegister/LoginOrRegister";
+import QRcode from "./pages/QRCode/QRCode";
 
 
 const App = () => (
@@ -22,12 +23,11 @@ const App = () => (
           <Route  path = "/UserProfile" component = {UserProfile} />
       
           <Route  path = "/LoginOrRegister" component = {LoginOrRegister} />
+
+          <Route  path = "/QRCode" component = {QRcode} />
         </div>
     </Router>
-    <hr />
-    <hr />
-    <hr />
-    <hr />
+    
     </Layout>
   </Auxiliary>
 );

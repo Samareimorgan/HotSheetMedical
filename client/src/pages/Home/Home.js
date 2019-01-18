@@ -9,9 +9,13 @@ class Home extends Component {
   
 
 
+onClickHandler = props => {
+  
+}
+
 render() {
     return (
-    <div>
+    <div> 
         <Layout>
      
         <div className ={classes.EmergencyHomeTitle}>
@@ -20,11 +24,11 @@ render() {
      
             <div className ={classes.HomeEmergencyBtns}> 
 
-                <EmergencyButton name = " Samantha" />
-                <EmergencyButton />
-                <EmergencyButton />
-                <EmergencyButton />
-                <EmergencyButton />
+                <EmergencyButton name =" Samantha Johnston" clicked = {this.onClickHandler}/>
+                <EmergencyButton name = "Different Patient" />
+                <EmergencyButton name = "Different Patient" />
+                <EmergencyButton name = "Different Patient" />
+                <EmergencyButton name = "Different Patient" />
             
             </div>
         </Layout>
