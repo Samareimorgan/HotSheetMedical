@@ -1,0 +1,10 @@
+.HotSheetBtn {
+    background-color: rgba(43, 97, 233, 1);
+    font-size: 16px;
+    padding: 10px;
+    width: 65%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    margin: 10px; 
+}
