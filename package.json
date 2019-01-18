@@ -38,7 +38,7 @@
     "install": "cd client && npm install",
     "heroku-prebuild": "rm -rf public/ && mkdir public",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
