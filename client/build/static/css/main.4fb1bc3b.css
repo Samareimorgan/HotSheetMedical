@@ -1,0 +1,744 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Lora', serif; */
+}.Layout__Content__-has-base64-5- {
+    margin-top: 72px;
+}.Logo__Logo__-has-base64-5- {
+    background-color: white;
+    height: 100%;
+   
+
+}
+
+.Logo__Logo__-has-base64-5- img {
+    height: 100%; 
+}.NavigationItems__NavigationItems__-has-base64-5- {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column;
+        flex-flow: column; 
+    -ms-flex-align: center; 
+        align-items: center;
+    height: 100%;
+}
+
+@media(min-width:500px) {
+    .NavigationItems__NavigationItems__-has-base64-5- {
+        -ms-flex-flow: row;
+            flex-flow: row;
+    }
+}.NavigationItem__NavigationItem__-has-base64-5- {
+    margin: 10px 0px; 
+    -webkit-box-sizing: border-box; 
+            box-sizing: border-box;
+    display: block; 
+    width: 100%;
+    font-size: 16px;
+}
+
+.NavigationItem__NavigationItem__-has-base64-5- a {
+    color: navy; 
+    text-decoration: none; 
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block; 
+}
+
+.NavigationItem__NavigationItem__-has-base64-5- a:hover, 
+.NavigationItem__NavigationItem__-has-base64-5- a:active,
+.NavigationItem__NavigationItem__-has-base64-5- a.NavigationItem__active__-has-base64-5- {
+    color: firebrick; 
+ 
+}
+
+@media(min-width: 500px) {
+    .NavigationItem__NavigationItem__-has-base64-5- {
+        margin: 0px; 
+        display: -ms-flexbox; 
+        display: flex; 
+        height: 100%;
+        width: auto;
+        -ms-flex-align: center;
+            align-items: center;
+        font-size: 16px;
+    }
+    
+    .NavigationItem__NavigationItem__-has-base64-5- a {
+        color: navy; 
+        padding: 16px 10px;
+        border-bottom: 4px solid transparent;
+    }
+    
+    .NavigationItem__NavigationItem__-has-base64-5- a:hover, 
+    .NavigationItem__NavigationItem__-has-base64-5- a:active,
+    .NavigationItem__NavigationItem__-has-base64-5- a.NavigationItem__active__-has-base64-5- {
+        background-color:white;
+        border-bottom: 4px solid firebrick;
+        color: firebrick; 
+     
+    }
+
+}
+.DrawerToggleBtn__ToggleButton__-has-base64-5- {
+    display: -ms-flexbox;
+    display: flex; 
+    -ms-flex-direction: column; 
+        flex-direction: column;
+    height: 24px; 
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-left: 0.5rem;
+}
+.DrawerToggleBtn__ToggleButton__-has-base64-5-:focus {
+    outline: none;
+}
+
+.DrawerToggleBtn__ToggleButtonLine__-has-base64-5- {
+    height: 2px;
+    width: 30px;
+    background: navy;
+}
+
+@media(min-width: 600px) {
+    .DrawerToggleBtn__ToggleButton__-has-base64-5- {
+        display: none;
+}
+}.NavBar__Navbar__-has-base64-5- {
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 56px;
+    background: white;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    padding: 0 20px; 
+    -webkit-box-sizing: border-box; 
+            box-sizing: border-box;
+    z-index: 90;
+
+}
+
+.NavBar__Navbar__-has-base64-5- nav {
+    height: 100%; 
+
+}
+.NavBar__Logo__-has-base64-5- {
+    height: 90%;
+}
+
+@media (max-width:600px) {
+    .NavBar__DesktopOnly__-has-base64-5-{
+        display: none;
+    }
+}
+
+@media (min-width:599px) {
+    .NavBar__ToggleBtn__-has-base64-5- {
+        display:none;
+    }
+}.SideDrawer__SideDrawer__-has-base64-5- {
+    height: 100%;
+    background: white;
+    -webkit-box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
+            box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 280px;
+    max-width: 60%;
+    z-index: 200;
+    padding: 32px 16px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    display: -ms-flexbox;
+    display: flex; 
+    -ms-flex-flow: column; 
+        flex-flow: column;
+    -ms-flex-align: center;
+        align-items: center;
+}
+.SideDrawer__Open__-has-base64-5- {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+}
+
+.SideDrawer__Close__-has-base64-5- {
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+}
+
+.SideDrawer__Logo__-has-base64-5- {
+    height: 12%;
+}
+
+
+
+@media (min-width: 501px) {
+    .SideDrawer__SideDrawer__-has-base64-5- {
+        display: none;
+    }
+}.Backdrop__Backdrop__-has-base64-5- {
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+@media(min-width: 599px) {
+    .Backdrop__Backdrop__-has-base64-5- {
+        display: none;
+    }
+}.Footer__Footer__-has-base64-5- {
+    position: fixed; 
+    bottom: 0px; 
+    left: 0px;
+    width: 100%;
+    height: 50px; 
+    color: navy;
+    background: white;
+}
+
+.Footer__FooterNavigation__-has-base64-5- {
+    display: -ms-flexbox;
+    display: flex; 
+    height: 100%; 
+    -ms-flex-align: center; 
+        align-items: center; 
+}
+
+.Footer__FooterNavigation__-has-base64-5- ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: -ms-flexbox;
+    display: flex; 
+}
+
+.Footer__FooterNavigationItems__-has-base64-5- li{
+    padding: 0 1.5rem;
+    font-size: 14px; 
+}
+
+.Footer__FooterNavigationItems__-has-base64-5- li a {
+    text-decoration: none;
+}
+
+.Footer__FooterNavigationItems__-has-base64-5- a:hover,
+.Footer__FooterNavigationItems__-has-base64-5- a:active {
+        color: rgb(255, 0, 43);
+}
+.EmergencyButton__EmergencyBtn__-has-base64-5- {
+    background-color: red;
+    font-size: 20px;
+    padding: 10px;
+    width: 65%;
+    height: 25%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    margin: 10px; 
+}html {
+    height: 100%
+}
+
+body {
+    background: navy;
+    height: 100%;
+}
+
+.home__EmergencyHomeTitle__-has-base64-5- {
+    color: white; 
+    font-size: 24px; 
+    margin-top: 25%;
+    text-align: center;
+    
+}
+
+
+.home__HomeEmergencyBtns__-has-base64-5- {
+    margin-top: 15%;
+    margin-left: 20%;
+
+}
+
+.ProfileHeader__Profile__-has-base64-5- {
+    display: -ms-flexbox;
+    display: flex; 
+    /* color: white */
+    background-color: white;
+    /* flex-direction:column; */
+    -ms-flex-pack: center;
+        justify-content: center;
+    height: 55px; 
+}
+
+.ProfileHeader__Name__-has-base64-5- h2 {
+    padding: 0;
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: Lora sans-serif;
+    -ms-flex-pack: center;
+        justify-content: center;
+    color: firebrick;
+}
+
+
+
+
+.PersonalInfo__PersonalContainer__-has-base64-5- {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 2px solid black;
+    color: navy;
+    background-color: white;
+    width: 90%;
+    margin: 5%;
+    font-size: 14px; 
+}
+
+.PersonalInfo__PersonalContainer__-has-base64-5- p {
+    padding-left: 5px; 
+}
+
+.PersonalInfo__InfoHeader__-has-base64-5- {
+    padding: 0;
+    margin-top: 5px; 
+    color: white; 
+
+}
+.PersonalInfo__InfoHeader__-has-base64-5- h2 {
+    display: -ms-flexbox;
+    display: flex; 
+    -ms-flex-pack: center; 
+        justify-content: center;
+    font-size: 20px;
+    font-family: Lora sans-serif;
+}.MedicalInfo__MedicalInfoContainer__-has-base64-5- {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 2px solid black;
+    color: navy;
+    background-color: white;
+    width: 90%;
+    margin: 5%;
+    font-size: 14px; 
+}
+
+.MedicalInfo__MedicalInfoHeader__-has-base64-5- h2 {
+    display: -ms-flexbox;
+    display: flex; 
+    -ms-flex-pack: center; 
+        justify-content: center;
+    font-size: 20px;
+    font-family: Lora sans-serif;
+    color: white;
+}
+.MedicalInfo__MedicalInfoContainer__-has-base64-5- h3 {
+    font-size: 15px; 
+    margin: 5px;
+}
+
+.MedicalInfo__MedicalInfoContainer__-has-base64-5- p {
+    padding-left: 5px; 
+}
+
+button {
+    padding: 2px; 
+    background-color: firebrick;
+    color: white;
+    border: 1px solid black;
+}.UserMedication__Suggestions__-has-base64-5- {
+    width: 10rem;
+    height: 25px;
+    
+}
+
+.UserMedication__Medication__-has-base64-5- {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    color: firebrick;
+}
+
+.UserMedication__MedicationInput__-has-base64-5- {
+    height: 20px;
+    width: 10rem;
+}
+.Modal__Modal__-has-base64-5- {
+    position: absolute;
+    background-color: white;
+    z-index: 500; 
+    width: 70%;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 1px 1px 1px grey;
+            box-shadow: 1px 1px 1px grey;
+    padding: 10px; 
+    left: 15%;
+    top: 10%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+    -webkit-transition: all 0.3x ease-out; 
+    -o-transition: all 0.3x ease-out; 
+    transition: all 0.3x ease-out;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+}
+
+@media (min-width: 600px) {
+    .Modal__Modal__-has-base64-5- {
+        width: 500px; 
+        left: calc(50% - 250px);
+    }
+}
+.LogInOrRegister__MainContainer__-has-base64-5- {
+    width: 100%; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%; 
+    display: -ms-flexbox; 
+    display: flex; 
+    -ms-flex-pack: center; 
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; 
+    -ms-flex-direction: column; 
+        flex-direction: column;
+}
+
+.LogInOrRegister__BoxController__-has-base64-5- {
+    visibility: visible;
+    display:-ms-flexbox;
+    display: flex;
+    max-width: 24em;
+    min-width: 21em;
+    height: 35px; 
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(15,15,15,0.2);
+    box-shadow:0px 0px 20px 0px rgba(15,15,15,0.2);
+    margin-bottom: 30px; 
+    -ms-flex-align: center; 
+        align-items: center;
+    -webkit-transition:  0.5s ease-out;
+    -o-transition:  0.5s ease-out;
+    transition:  0.5s ease-out;
+}
+
+.LogInOrRegister__Controller__-has-base64-5- {
+    -ms-flex: 1 1;
+        flex: 1 1;
+    text-align: center;
+    height: 100%;
+    line-height: 2;
+    cursor: pointer;
+}
+.LogInOrRegister__SelectedController__-has-base64-5- {
+    -ms-flex: 1 1;
+        flex: 1 1;
+    text-align: center;
+    height: 100%;
+    line-height: 2;
+    cursor: pointer;
+    border-bottom: 3px solid black;
+}
+
+
+.LogInOrRegister__BoxContainer__-has-base64-5- {
+    display: -ms-flexbox;
+    display: flex; 
+    -ms-flex-direction:column; 
+        flex-direction:column;
+    max-width: 24em;
+    min-width: 21em;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(15,15,15,0.2);
+            box-shadow: 0px 0px 20px 0px rgba(15,15,15,0.2);
+    border-radius: 6px;
+    padding: 24px;
+
+}
+
+.LogIn__InnerContainer__-has-base64-5- {
+    -webkit-transition: visibility 0.2s ease-out;
+    -o-transition: visibility 0.2s ease-out;
+    transition: visibility 0.2s ease-out;
+}
+
+.LogIn__BoxHeader__-has-base64-5- {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 17px;
+    font-family: Lora, serif;
+    font-weight: 600;
+    font-size: 22px;
+    border-bottom: 2px solid black;
+
+}
+
+.LogIn__InnerContainer__-has-base64-5-.LogIn__show__-has-base64-5- {
+    visibility: visible;
+}
+
+.LogIn__Box__-has-base64-5- {
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+}
+
+.LogIn__InputGroup__-has-base64-5- {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.LogIn__LoginLabel__-has-base64-5- {
+    font-family: Lora, serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+.LogIn__LoginInput__-has-base64-5- {
+    height: 2.1em;
+    border-radius: 3px;
+    border: 1px solid black;
+    -webkit-transition: border 0.4s ease-out;
+    -o-transition: border 0.4s ease-out;
+    transition: border 0.4s ease-out;
+    padding: 13px;
+    font-family: Lora, serif;
+    font-size: 19px;
+    color: firebrick;
+    background: rgba(15,15,15, 0.01);
+}
+
+.LogIn__LoginInput__-has-base64-5-:hover {
+    border: 2px solid black;
+    color: firebrick;
+}
+
+.LogIn__LoginInput__-has-base64-5-:focus {
+    border: 2px solid #6565e7
+}
+
+
+.LogIn__LoginInput__-has-base64-5-::-webkit-input-placeholder {
+    font-family: Oxygen, sans-serif;
+    font-size: 16px;
+    color: rgba(46, 213, 116, 0.839);
+    
+}
+
+
+.LogIn__LoginInput__-has-base64-5-:-ms-input-placeholder {
+    font-family: Oxygen, sans-serif;
+    font-size: 16px;
+    color: rgba(46, 213, 116, 0.839);
+    
+}
+
+
+.LogIn__LoginInput__-has-base64-5-::placeholder {
+    font-family: Oxygen, sans-serif;
+    font-size: 16px;
+    color: rgba(46, 213, 116, 0.839);
+    
+}
+
+.LogIn__LoginBtn__-has-base64-5- {
+    padding: 2px 30px;
+    border: 0;
+    font-size: 18px;
+    border-radius: 3px;
+    font-family: Oxygen, sans-serif;
+    background-color: rgba(15, 15, 15, 0.03);
+    margin-top: 20px;
+    border: 2px solid #417cef;
+    -webkit-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+}
+
+.LogIn__LoginBtn__-has-base64-5-:hover,
+.LogIn__LoginBtn__-has-base64-5-:focus {
+    background-color: #417cef;
+    color: white;
+}.Register__InnerContainer__-has-base64-5- {
+    -webkit-transition: visibility 0.2s ease-out;
+    -o-transition: visibility 0.2s ease-out;
+    transition: visibility 0.2s ease-out;
+}
+
+.Register__BoxHeader__-has-base64-5- {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 17px;
+    font-family: Lora, serif;
+    font-size: 22px;
+    border-bottom: 2px solid black;
+
+}
+
+.Register__InnerContainer__-has-base64-5-.Register__show__-has-base64-5- {
+    visibility: visible;
+}
+
+.Register__Box__-has-base64-5- {
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+}
+
+.Register__InputGroup__-has-base64-5- {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.Register__RegisterLabel__-has-base64-5- {
+    font-family: Lora, serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+.Register__RegisterInput__-has-base64-5- {
+    height: 2.1em;
+    border-radius: 3px;
+    border: 1px solid black;
+    -webkit-transition: border 0.4s ease-out;
+    -o-transition: border 0.4s ease-out;
+    transition: border 0.4s ease-out;
+    padding: 13px;
+    font-family: Lora, serif;
+    font-size: 19px;
+    color: firebrick;
+    background: rgba(15,15,15, 0.01);
+}
+
+.Register__RegisterInput__-has-base64-5-:hover {
+    border: 2px solid black;
+    color: firebrick;
+}
+
+.Register__RegisterInput__-has-base64-5-:focus {
+    border: 2px solid #6565e7
+}
+
+
+.Register__RegisterInput__-has-base64-5-::-webkit-input-placeholder {
+    font-family: Oxygen, sans-serif;
+    font-size: 16px;
+    color: rgba(46, 213, 116, 0.839);
+    
+}
+
+
+.Register__RegisterInput__-has-base64-5-:-ms-input-placeholder {
+    font-family: Oxygen, sans-serif;
+    font-size: 16px;
+    color: rgba(46, 213, 116, 0.839);
+    
+}
+
+
+.Register__RegisterInput__-has-base64-5-::placeholder {
+    font-family: Oxygen, sans-serif;
+    font-size: 16px;
+    color: rgba(46, 213, 116, 0.839);
+    
+}
+
+.Register__RegisterBtn__-has-base64-5- {
+    padding: 2px 30px;
+    border: 0;
+    font-size: 18px;
+    border-radius: 3px;
+    font-family: Oxygen, sans-serif;
+    background-color: rgba(15, 15, 15, 0.03);
+    margin-top: 20px;
+    border: 2px solid #417cef;
+    -webkit-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+}
+
+.Register__RegisterBtn__-has-base64-5-:hover,
+.Register__RegisterBtn__-has-base64-5-:focus {
+    background-color: #417cef;
+    color: white;
+}.Input__Input__-has-base64-5- {
+    width: 100%;
+    padding: 10px; 
+    -webkit-box-sizing: border-box; 
+            box-sizing: border-box;
+}
+
+.Input__Label__-has-base64-5- {
+    font-weight: bold; 
+    display: block;
+    margin-bottom: 8px; 
+}
+
+.Input__InputElement__-has-base64-5- {
+    outline: none; 
+    border: 1px solid #ccc;
+    background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    display: block; 
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+}
+
+.Input__InputElement__-has-base64-5-:focus {
+    outline: none; 
+    background-color: #ccc;
+}
+/*# sourceMappingURL=main.4fb1bc3b.css.map*/

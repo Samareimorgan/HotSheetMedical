@@ -20,7 +20,7 @@ render() {
      
             <div className ={classes.HomeEmergencyBtns}> 
 
-                <EmergencyButton />
+                <EmergencyButton name = " Samantha" />
                 <EmergencyButton />
                 <EmergencyButton />
                 <EmergencyButton />
