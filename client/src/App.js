@@ -7,6 +7,7 @@ import UserProfile from "./pages/UserProfile/UserProfile";
 import DatabaseEdit from "./pages/DatabaseEdit/DatabaseEdit";
 import LoginOrRegister from "./pages/LoginOrRegister/LoginOrRegister";
 
+
 const App = () => (
 <Auxiliary>
   <Layout>

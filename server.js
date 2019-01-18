@@ -27,7 +27,7 @@ app.use(bodyParser.json());
     if(process.env.NODE_ENV === "production") {
         app.use(express.static("client/build"));
     } else {
-        app.use(express.static("public"));
+        app.use(express.static("client/public"));
     }
 
 //Add routes, both API and view
