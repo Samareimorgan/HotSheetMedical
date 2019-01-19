@@ -9,7 +9,7 @@ const navigationItems = () => (
         {/* <NavigationItem link = "/">Settings</NavigationItem> */}
         {/* <NavigationItem link = "/"> Connections</NavigationItem> */}
         {/* <NavigationItem link = "/">About</NavigationItem> */}
-        <NavigationItem link = "/LoginOrRegister" >Login/Logout</NavigationItem>
+        <NavigationItem link = "/Auth" >Login/Logout</NavigationItem>
 
     </ul>
 );
