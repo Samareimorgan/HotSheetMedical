@@ -1,0 +1,15 @@
+.AuthForm {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .AuthModeControl {
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .authForm {
+      width: 40rem;
+    }
+  }
