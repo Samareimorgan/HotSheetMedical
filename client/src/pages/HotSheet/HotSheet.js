@@ -7,9 +7,9 @@ class HotSheet extends Component {
 
     render() {
         return(
-
+        <Auxiliary>
             <HotSheetData />
-
+        </Auxiliary>
         )
     }
 }
