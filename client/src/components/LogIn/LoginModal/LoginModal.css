@@ -1,0 +1,46 @@
+.Modal {
+    position: fixed;
+    top: 30vh;
+    left: 10%;
+    width: 80%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    z-index: -1;
+    background: white;
+    border-radius: 3px;
+    transform: translateY(-3rem);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  }
+  
+  .Modal.open {
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 100;
+  }
+  
+  .ModalHeader {
+      padding: 1rem;
+      border-bottom: 1px solid #6200ff;
+  }
+  
+  .ModalHeader h1 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: #6200ff;
+  }
+  
+  .ModalContent {
+      padding: 1rem;
+  }
+  
+  .ModalActions {
+      text-align: right;
+      padding: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .Modal {
+      left: 30%;
+      width: 40%;
+    }
+  }

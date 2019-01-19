@@ -1,0 +1,30 @@
+.AuthForm {
+    width: 90%;
+    margin: auto;
+    color: white;
+  }
+  
+  .AuthModeControl {
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .SwitchBtn {
+    width: 45%;
+    height: 20%;
+    background-color: firebrick;
+    font-size: 16px;
+  }
+  .SubmitBtn {
+    width: 45%;
+    height: 20%;
+    background-color: firebrick;
+    font-size: 16px;
+  }
+
+   
+  @media (min-width: 768px) {
+    .AuthForm {
+      width: 40rem;
+    }
+  }

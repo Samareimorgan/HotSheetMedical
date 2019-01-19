@@ -13,6 +13,14 @@ const PORT = process.env.PORT || 3001;
 //Initialize express
 const app = express();
 
+// Setting CORS  for API access
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-type,Authorization');
+    next();
+  });
+
+
 //Use morgan logger to log requests
 app.use(logger("dev"));
 
@@ -30,11 +38,19 @@ app.use(bodyParser.json());
         app.use(express.static("client/public"));
     }
 
-//Add routes, both API and view
+//Use routes
 app.use(routes);
 
+
 //Connect to the Mongo DB
-mongoose.connect('mongodb://localhost:27017/hotsheetmedical', { useNewUrlParser: true });
+
+const MongoURL = process.env.MONGODB_URI;
+
+
+
+mongoose.connect( MongoURL ||'mongodb://localhost:27017/hotsheetmedical', { useNewUrlParser: true });
+   
+
 
 
 //Start the API Server
