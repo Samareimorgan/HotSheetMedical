@@ -43,3 +43,5 @@ const hotsheet = props => (
         </div>
     </div>
 )
+
+export default hotsheet;

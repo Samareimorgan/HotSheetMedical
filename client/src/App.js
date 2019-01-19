@@ -10,6 +10,7 @@ import LoginOrRegister from "./pages/LoginOrRegister/LoginOrRegister";
 import Qrcode from "./pages/QRCode/QRCode";
 import LoginModal from "../src/components/LogIn/LoginModal/LoginModal";
 import Auth from "./pages/Auth/Auth";
+import HotSheet from "./pages/HotSheet/HotSheet";
 
 
 
@@ -93,6 +94,8 @@ const app = props => (
             <Route  path = "/LoginOrRegister" component = {LoginOrRegister} />
 
             <Route  path = "/QRCode" component = {Qrcode} />
+
+            <Route path = "/HotSheet" component = {HotSheet} />
 
             <Route path = "/Auth" component = {Auth} />
           </div>

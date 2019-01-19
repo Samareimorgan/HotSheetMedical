@@ -1,0 +1,8 @@
+.Dropdown {
+    height: 35px;
+    width: 60%;
+    font-size: 14px; 
+    border: 2px solid firebrick;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
