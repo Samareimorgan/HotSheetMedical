@@ -21,7 +21,7 @@ class AuthPage extends Component {
     return (
       <main>
         <section className={classes.AuthModeControl}>
-          <Button type="button" onClick={this.props.onAuthModeChange}>
+          <Button type="button" onClick={this.props.onAuthModeChange} className={classes.SwitchBtn}>
             {modeButtonText}
           </Button>
         </section>
@@ -44,7 +44,7 @@ class AuthPage extends Component {
             config={{ type: 'password' }}
             onChange={event => this.inputChangeHandler(event, 'password')}
           />
-          <Button type="submit">{submitButtonText}</Button>
+          <Button type="submit" className={classes.SubmitBtn}>{submitButtonText}</Button>
         </form>
       </main>
     );
