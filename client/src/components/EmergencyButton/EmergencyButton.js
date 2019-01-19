@@ -2,10 +2,13 @@ import React from 'react';
 import { Button } from 'reactstrap';
 import classes from "./EmergencyButton.css";
 
-export default props => {
+const EmergencyButton = props => {
   return (
     
-    <Button  className={classes.EmergencyBtn} {...props.name}> Patient Name </Button>
+    <a href = {props.link}>
+     <Button  className={classes.EmergencyBtn} > {props.name} </Button> </a>
    
   );
 };
+
+export default EmergencyButton; 
