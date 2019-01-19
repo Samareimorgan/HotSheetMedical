@@ -38,7 +38,7 @@ app.use(bodyParser.json());
         app.use(express.static("client/public"));
     }
 
-//Add routes, both API and view
+//Use routes
 app.use(routes);
 
 

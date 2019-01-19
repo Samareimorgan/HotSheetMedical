@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
-const ObjectId = mongoose.Schema.Types.ObjectId;
+// const ObjectId = mongoose.Schema.Types.ObjectId;
 const Schema = mongoose.Schema;
 
 const usersSchema = new Schema ({
-    user_id: {
-        type: ObjectId,
-        required: true
-    },
+    // user_id: {
+    //     type: ObjectId,
+    //     required: true
+    // },
     first_name: {
         type: String,
         required: true
@@ -44,28 +44,23 @@ const usersSchema = new Schema ({
     email: {
         type: String,
         required: true,
-        validate: {
-            validator: function(v) {
-                return/@mongodb\.com$/.test(v);
-            }
-        }
+        // validate: {
+        //     validator: function(v) {
+        //         return/@mongodb\.com$/.test(v);
+        //     }
+        // }
     },
 
     phone: {
         type: Number,
-        validate: {
-            validator: function(v) {
-              return /\d{3}-\d{3}-\d{4}/.test(v);
-            },
-            message: props => `${props.value} is not a valid phone number!`
-          },
-          required: [true, 'User phone number required in 000-000-0000 format']
+        required: [true, 'User phone number required in 000-000-0000 format']
     },
 
     
 
     birthdate: {
         type: Date,
+        default: Date.now,
         required: true,
         validate:{
             validator: input => {
@@ -103,26 +98,26 @@ const usersSchema = new Schema ({
         
     },
 
-    doctors: [ 
-        {
-            type: Schema.Types.ObjectId,
-            ref: "Doctors"
-        } 
-    ],
+    // doctors: [ 
+    //     {
+    //         type: Schema.Types.ObjectId,
+    //         ref: "Doctors"
+    //     } 
+    // ],
 
-    medications: [
-        {
-            type: Schema.Types.ObjectId, 
-            ref: "Medications"
-        }
-    ], 
+    // medications: [
+    //     {
+    //         type: Schema.Types.ObjectId, 
+    //         ref: "Medications"
+    //     }
+    // ], 
 
-    allergies:[
-        {
-            type: Schema.Types.ObjectId,
-            ref:"Allergies"
-        }
-    ],
+    // allergies:[
+    //     {
+    //         type: Schema.Types.ObjectId,
+    //         ref:"Allergies"
+    //     }
+    // ],
 
     // connections: [
     //     {
