@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
 import Layout from './components/Layout/Layout';
 import Auxiliary from "./hoc/Auxiliary";
+
 import axios from "axios";
 import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
+
 import Home from "./pages/Home/Home.js";
 import UserProfile from "./pages/UserProfile/UserProfile";
 import DatabaseEdit from "./pages/DatabaseEdit/DatabaseEdit";
 import LoginOrRegister from "./pages/LoginOrRegister/LoginOrRegister";
 import Qrcode from "./pages/QRCode/QRCode";
+
 import LoginModal from "../src/components/LogIn/LoginModal/LoginModal";
 import Auth from "./pages/Auth/Auth";
 import HotSheet from "./pages/HotSheet/HotSheet";
+
 
 
 
@@ -109,3 +113,4 @@ const app = props => (
   
 
 export default app;
+

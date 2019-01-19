@@ -1,7 +1,7 @@
 import React from "react"; 
 import Auxiliary from "../../hoc/Auxiliary";
 import ProfileHeader from "../../components/ProfileUI/ProfileHeader";
-import classes from "../UserProfile/UserProfile.css";
+
 import PersonalInfo from "../../components/ProfileUI/PersonalInfo";
 import MedicalInfo from "../../components/ProfileUI/MedicalInfo";
 
@@ -28,7 +28,10 @@ const userProfile = (props) => {
             medicationslist = "vitamin B12, Lipitor"
             />
 
-
+                <hr />
+                <hr />
+                <hr />
+                <hr />
             
         
         </Auxiliary>
