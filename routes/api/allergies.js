@@ -1,16 +1,34 @@
-const router = require("express").Router();
-const allergiescontroller = require("../../controllers/allergiescontroller");
+const express = require("express");
+const router = express.Router();
+
+
+//allergies Model
+const Allergies = require("../../models/allergies");
 
 //Matches /api/allergies
-router.route("/")
-    .get(allergiescontroller.findAll)
-    // .post(allergiescontroller.create);
+//Create Get api/allergies Route
+// Get All allergies
+router.get ('/', (req, res) => {
+    Allergies.find()
+        .then(allergies =>res.json(allergies))
+});
 
-//Matches /api/allergies/:id
-// router
-//     .route("/:id")
-//     .get(allergiescontroller.findById)
-//     .put(allergiescontroller.update)
-//     .delete(allergiescontroller.remove);
+//Create a New allergies and Post to the Database
+router.post ('/', (req, res) => {
+    
+    const newAllergies = new Allergies({
+        medName: req.body.medName,
+    });
+    newAllergies.save().then(allergies => res.json(allergies));
+        
+});
+
+//Delete a allergies by ID
+router.delete ('/:id', (req, res) => {
+    Allergies.findById(req.params.id)
+        .then(allergies =>allergies.remove().then(() => res.json({success:true})))
+        .catch(err => res.status(404).json({success: false}));
+
+})
 
 module.exports = router;
