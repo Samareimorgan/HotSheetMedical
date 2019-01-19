@@ -7,10 +7,13 @@ import Home from "./pages/Home/Home.js";
 import UserProfile from "./pages/UserProfile/UserProfile";
 import DatabaseEdit from "./pages/DatabaseEdit/DatabaseEdit";
 import LoginOrRegister from "./pages/LoginOrRegister/LoginOrRegister";
+import Qrcode from "./pages/QRCode/QRCode";
+import LoginModal from "../src/components/LogIn/LoginModal/LoginModal";
+import Auth from "./pages/Auth/Auth";
 
 
 
-class App extends Component {
+const app = props => (
   // state = {
   //   isAuth: true, 
   //   authmode: "login",
@@ -69,11 +72,14 @@ class App extends Component {
 
   //   )
   // }
-  render () {
-    return (
+  
+  
   
     <Auxiliary>
     <Layout>
+ 
+    
+
       
   
       <Router>
@@ -87,6 +93,8 @@ class App extends Component {
             <Route  path = "/LoginOrRegister" component = {LoginOrRegister} />
 
             <Route  path = "/QRCode" component = {Qrcode} />
+
+            <Route path = "/Auth" component = {Auth} />
           </div>
       </Router>
       
@@ -94,6 +102,7 @@ class App extends Component {
     </Auxiliary>
 
       );
-  }
-}
-export default App;
+    
+  
+
+export default app;

@@ -26,7 +26,7 @@ class AuthPage extends Component {
           </Button>
         </section>
         <form
-          className="auth__form"
+          className= {classes.AuthForm}
           onSubmit={event =>
             this.props.onAuth(event, {
               email: this.state.email,
