@@ -17,7 +17,7 @@ class UserMedication extends Component {
     }
 
     saveMed = (info) => {
-        unirest.post("/api/users/save", info);
+        unirest.post("/api/medications", info);
     }
 
 
@@ -76,7 +76,7 @@ class UserMedication extends Component {
                     </select>
                     <hr/>
                     
-                    <button type = "submit" className={classes.MedicationSave}>SAVE</button>
+                    <a href = {this.props.link} ><button type = "submit" className={classes.MedicationSave}>SAVE</button> </a>
                 </Modal>
             </div>
             

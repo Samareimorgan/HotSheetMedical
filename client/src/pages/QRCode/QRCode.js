@@ -4,6 +4,7 @@ import QRCode from "../../components/QRCode/QRCode";
 import HotSheetButton from "../../components/HotSheetButton/HotSheetButton";
 
 
+
 class Qrcode extends Component {
     // constructor(props) {
     //     super(props) 
@@ -24,7 +25,7 @@ render () {
             
 
             <QRCode /> 
-            <HotSheetButton link = "/HotSheetData"/>
+            <HotSheetButton link="/HotSheet"/>
 
         </div>
         

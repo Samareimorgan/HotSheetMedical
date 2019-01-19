@@ -1,8 +1,10 @@
 import React from "react";
 import classes from "./MedicalInfo.css";
 import Auxiliary from "../../hoc/Auxiliary";
+import { Button } from 'reactstrap';
 
-const medicalInfo = props => (
+const medicalInfo = props => {
+    return (
     <Auxiliary >
         <div className= {classes.MedicalInfoHeader}>
             <h2>Medical Information</h2>
@@ -14,21 +16,22 @@ const medicalInfo = props => (
                 <p><strong>Company Name: </strong>{props.doccompany}</p>
                 <p><strong>Office Address: </strong>{props.docaddress}</p>
                 <p><strong>Phone: </strong>{props.docphone}</p>
-            <button>Edit Information</button>
+            <Button>Edit Information</Button>
             </div>
             <div className = {classes.MedicalInfoContainer}>
                 <h3> Current Medications </h3>
                 <p> {props.medicationslist}</p>
-            <button>Edit Information</button>
+            <a href = {props.link}> <Button>Edit Information</Button> </a>
             </div>
             <div className = {classes.MedicalInfoContainer}>
                 <h3> Allergies </h3>
                 <p> {props.allergies}</p>
-            <button>Edit Information</button>
+                <Button>Edit Information</Button> 
             </div>
         </div>
 
     </Auxiliary>
 )
+    };
 
 export default medicalInfo;

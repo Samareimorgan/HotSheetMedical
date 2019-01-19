@@ -6,7 +6,7 @@ import classes from "./DatabaseEdit.css";
 const databaseEdit = () => {
  return(
     <Auxiliary>
-        <UserMedication />
+        <UserMedication link = "/UserProfile"/>
     </Auxiliary>
  )
 };

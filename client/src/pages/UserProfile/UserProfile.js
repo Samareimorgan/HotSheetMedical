@@ -6,11 +6,8 @@ import PersonalInfo from "../../components/ProfileUI/PersonalInfo";
 import MedicalInfo from "../../components/ProfileUI/MedicalInfo";
 
 
-const userProfile = (props) => {
-    
 
- 
-    return (
+const userProfile = props => (
         <Auxiliary>
             <ProfileHeader name = "Samantha Johnston"  />
             <PersonalInfo 
@@ -26,6 +23,7 @@ const userProfile = (props) => {
             docphone = "303-249-3245"
             allergies = "sulfa, penicillin "
             medicationslist = "vitamin B12, Lipitor"
+            link = "/DatabaseEdit"
             />
 
                 <hr />
@@ -37,9 +35,7 @@ const userProfile = (props) => {
         </Auxiliary>
 
 
-       
-
     )
-}
+
 
 export default userProfile;
