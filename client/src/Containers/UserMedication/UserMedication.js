@@ -35,7 +35,7 @@ class UserMedication extends Component {
             
             console.log("Triggered");
             unirest.get("https://iterar-mapi-us.p.mashape.com/api/autocomplete?query=" + query)
-            .header("X-Mashape-Key", API_KEY)
+            .header("X-RapidAPI-Key", API_KEY)
             .header("Accept", "application/json")
             .end(result => {
                 console.log(result.body);
