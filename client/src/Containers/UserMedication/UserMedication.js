@@ -34,7 +34,7 @@ class UserMedication extends Component {
         if(query.length === 3) {
             
             console.log("Triggered");
-            unirest.get("https://iterar-mapi-us.p.rapidapi.com/api/"+ query "/substances.json")
+            unirest.get("https://iterar-mapi-us.p.rapidapi.com/api/autocomplete?query=" + query)
             .header("X-RapidAPI-Key", API_KEY)
             .header("Accept", "application/json")
             .end(result => {
